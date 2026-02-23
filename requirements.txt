@@ -1,8 +1,8 @@
-httpx<0.28
+httpx>=0.23
 requests
 pyreadline3 ; platform_system=="Windows"
 pyperclip
-youtube-search-python>=1.6.5
+py-yt-search>=0.5.7
 yt-dlp>=2023.9.24
 colorama ; platform_system=="Windows"
 pylast
