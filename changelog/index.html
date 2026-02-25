@@ -1,0 +1,3052 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Terminal based YouTube player and downloader.">
+      
+      
+      
+        <link rel="canonical" href="https://iamtalhaasghar.github.io/yewtube/changelog/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../license/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+    
+    
+      
+        <title>Changelog - Yewtube</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../css/mkdocstrings.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#changelog" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Yewtube" class="md-header__button md-logo" aria-label="Yewtube" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Yewtube
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Changelog
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/mps-youtube/yewtube" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mps-youtube/yewtube
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href=".." class="md-tabs__link">
+          
+  
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../reference/__init__/" class="md-tabs__link">
+          
+  
+  
+  Code Reference
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../contributing/" class="md-tabs__link">
+          
+  
+  
+  Development
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Yewtube" class="md-nav__button md-logo" aria-label="Yewtube" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Yewtube
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/mps-youtube/yewtube" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mps-youtube/yewtube
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Home
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#v2121-2025-01-05" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v2.12.1 (2025-01-05)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v2.12.1 (2025-01-05)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bug Fixes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chores
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documentation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v2120-2024-09-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v2.12.0 (2024-09-11)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v2.12.0 (2024-09-11)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chores_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chores
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v2117-2024-09-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v2.11.7 (2024-09-11)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v2.11.7 (2024-09-11)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bug Fixes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v2116-2024-09-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v2.11.6 (2024-09-11)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v2.11.6 (2024-09-11)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bug Fixes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chores_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chores
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v2115-2024-09-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v2.11.5 (2024-09-11)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v2114-2024-09-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v2.11.4 (2024-09-11)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v2113-2024-09-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v2.11.3 (2024-09-11)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v2.11.3 (2024-09-11)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#documentation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documentation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v2105-2023-08-29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v2.10.5 (2023-08-29)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v2.10.5 (2023-08-29)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bug Fixes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../license/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    License
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Code Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Code Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    mps_youtube
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    mps_youtube
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/__init__/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    __init__.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/c/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    c.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/cache/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    cache.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_4" id="__nav_2_1_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    commands
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    commands
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/commands95_init__.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    __init__.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/commands/album_search/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    album_search.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/commands/config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    config.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/commands/download/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    download.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/commands/generate_playlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    generate_playlist.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/commands/lastfm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    lastfm.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/commands/local_playlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    local_playlist.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/commands/misc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    misc.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/commands/play/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    play.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/commands/search/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    search.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/commands/songlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    songlist.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/commands/spotify_playlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    spotify_playlist.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/content/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    content.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/contentquery/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    contentquery.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/description_parser/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    description_parser.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/g/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    g.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/helptext/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    helptext.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/history/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    history.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/init/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    init.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_12" id="__nav_2_1_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    listview
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    listview
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/listview95_init__.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    __init__.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/listview/base/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    base.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/listview/livestream/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    livestream.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/listview/songtitle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    songtitle.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/listview/user/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    user.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/main/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    main.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/pafy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    pafy.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/paths/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    paths.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/player/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    player.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_17" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_17" id="__nav_2_1_17_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    players
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_17">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    players
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/players95_init__.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    __init__.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/players/GenericPlayer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GenericPlayer.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/players/mplayer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    mplayer.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/players/mpv/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    mpv.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/players/vlc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    vlc.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/playlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    playlist.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/playlists/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    playlists.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/screen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    screen.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/streams/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    streams.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/terminalsize/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    terminalsize.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/util/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    util.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Development
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Development
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#v2121-2025-01-05" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v2.12.1 (2025-01-05)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v2.12.1 (2025-01-05)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bug Fixes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chores
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documentation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v2120-2024-09-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v2.12.0 (2024-09-11)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v2.12.0 (2024-09-11)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chores_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chores
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v2117-2024-09-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v2.11.7 (2024-09-11)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v2.11.7 (2024-09-11)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bug Fixes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v2116-2024-09-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v2.11.6 (2024-09-11)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v2.11.6 (2024-09-11)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bug Fixes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chores_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chores
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v2115-2024-09-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v2.11.5 (2024-09-11)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v2114-2024-09-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v2.11.4 (2024-09-11)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v2113-2024-09-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v2.11.3 (2024-09-11)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v2.11.3 (2024-09-11)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#documentation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documentation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v2105-2023-08-29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v2.10.5 (2023-08-29)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v2.10.5 (2023-08-29)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bug Fixes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="changelog">CHANGELOG<a class="headerlink" href="#changelog" title="Permanent link">&para;</a></h1>
+<h2 id="v2121-2025-01-05">v2.12.1 (2025-01-05)<a class="headerlink" href="#v2121-2025-01-05" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes">Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Bump yt-dlp version to next stable release
+  (<a href="https://github.com/mps-youtube/yewtube/commit/1c79f112f64f82474ea323d2793411a6b4fde1a1"><code>1c79f11</code></a>)</li>
+</ul>
+<h3 id="chores">Chores<a class="headerlink" href="#chores" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fixes #1303 1300 https &gt; 0.28 throws proxy can not be passed as argument error
+  (<a href="https://github.com/mps-youtube/yewtube/commit/7ab2fe2cf05e4ad77093ebbb0eb11b597b6682d9"><code>7ab2fe2</code></a>)</li>
+</ul>
+<h3 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Demonstrate how to use existing mpv input bindings
+  (<a href="https://github.com/mps-youtube/yewtube/pull/1289">#1289</a>,
+  <a href="https://github.com/mps-youtube/yewtube/commit/2d89c3fb946b683778501d896f149c534586bb67"><code>2d89c3f</code></a>)</li>
+</ul>
+<p>demonstrate how to use existing mpv input bindings</p>
+<h2 id="v2120-2024-09-11">v2.12.0 (2024-09-11)<a class="headerlink" href="#v2120-2024-09-11" title="Permanent link">&para;</a></h2>
+<h3 id="chores_1">Chores<a class="headerlink" href="#chores_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Clean up setup.cfg
+  (<a href="https://github.com/mps-youtube/yewtube/commit/dfa42a2afeed3e4130870af8eecd6a54d05d4340"><code>dfa42a2</code></a>)</li>
+</ul>
+<h2 id="v2117-2024-09-11">v2.11.7 (2024-09-11)<a class="headerlink" href="#v2117-2024-09-11" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_1">Bug Fixes<a class="headerlink" href="#bug-fixes_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Semantic_release version for pypi setup.py was stuck
+  (<a href="https://github.com/mps-youtube/yewtube/commit/f29e0b33241ae50e04fb4d2b0b8308be328eef82"><code>f29e0b3</code></a>)</li>
+</ul>
+<h2 id="v2116-2024-09-11">v2.11.6 (2024-09-11)<a class="headerlink" href="#v2116-2024-09-11" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_2">Bug Fixes<a class="headerlink" href="#bug-fixes_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Wheel_recipe.sh
+  (<a href="https://github.com/mps-youtube/yewtube/commit/5005c1a79e09049a57b8427678062f20cf377a72"><code>5005c1a</code></a>)</li>
+</ul>
+<h3 id="chores_2">Chores<a class="headerlink" href="#chores_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Update author email
+  (<a href="https://github.com/mps-youtube/yewtube/commit/6a5641cfdf209a9c87783178b61b9ea348aed6b9"><code>6a5641c</code></a>)</li>
+</ul>
+<h2 id="v2115-2024-09-11">v2.11.5 (2024-09-11)<a class="headerlink" href="#v2115-2024-09-11" title="Permanent link">&para;</a></h2>
+<h2 id="v2114-2024-09-11">v2.11.4 (2024-09-11)<a class="headerlink" href="#v2114-2024-09-11" title="Permanent link">&para;</a></h2>
+<h2 id="v2113-2024-09-11">v2.11.3 (2024-09-11)<a class="headerlink" href="#v2113-2024-09-11" title="Permanent link">&para;</a></h2>
+<h3 id="documentation_1">Documentation<a class="headerlink" href="#documentation_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Extend upgrade instructions (<a href="https://github.com/mps-youtube/yewtube/pull/1249">#1249</a>,
+  <a href="https://github.com/mps-youtube/yewtube/commit/f62a5fd96f97806f35a015df21274e0debf0c8e3"><code>f62a5fd</code></a>)</li>
+</ul>
+<p>This adds the pip / pipx commands to upgrade all the dependencies. This makes directed actions like
+  <a href="https://github.com/mps-youtube/yewtube/issues/1225#issuecomment-1493400886">https://github.com/mps-youtube/yewtube/issues/1225#issuecomment-1493400886</a> unnecessary.</p>
+<h2 id="v2105-2023-08-29">v2.10.5 (2023-08-29)<a class="headerlink" href="#v2105-2023-08-29" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_3">Bug Fixes<a class="headerlink" href="#bug-fixes_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<h1 id="1243-bumped-yt-dlp-version">1243 bumped yt-dlp version<a class="headerlink" href="#1243-bumped-yt-dlp-version" title="Permanent link">&para;</a></h1>
+<p>(<a href="https://github.com/mps-youtube/yewtube/commit/9ed4921693443bb92eaddbafbfadeba8839b4e04"><code>9ed4921</code></a>)</p>
+</li>
+<li>
+<h1 id="1243-bumped-yt-dlp-version_1">1243 bumped yt-dlp version<a class="headerlink" href="#1243-bumped-yt-dlp-version_1" title="Permanent link">&para;</a></h1>
+<p>(<a href="https://github.com/mps-youtube/yewtube/commit/4461d0c8e2b6f47c2919e6ae932eb28c8102e5cd"><code>4461d0c</code></a>)</p>
+</li>
+</ul>
+<p>Thanks to @galgot</p>
+<h2 id="v2104-2023-06-14">v2.10.4 (2023-06-14)<a class="headerlink" href="#v2104-2023-06-14" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_4">Bug Fixes<a class="headerlink" href="#bug-fixes_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<h1 id="806-pressing-q-doesnt-stops-playback-when-in-repeat-mode">806 - pressing q doesn't stops playback when in repeat mode<a class="headerlink" href="#806-pressing-q-doesnt-stops-playback-when-in-repeat-mode" title="Permanent link">&para;</a></h1>
+  (<a href="https://github.com/mps-youtube/yewtube/commit/645617accd1fda316b22aa81270917adae9d2712"><code>645617a</code></a>)</li>
+</ul>
+<h3 id="chores_3">Chores<a class="headerlink" href="#chores_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Use pipenv
+  (<a href="https://github.com/mps-youtube/yewtube/commit/2edd0ddb4f8e9b450fac7218995a8dc8dc6f1ea1"><code>2edd0dd</code></a>)</li>
+</ul>
+<h2 id="v2103-2023-06-14">v2.10.3 (2023-06-14)<a class="headerlink" href="#v2103-2023-06-14" title="Permanent link">&para;</a></h2>
+<h2 id="v2102-2023-03-22">v2.10.2 (2023-03-22)<a class="headerlink" href="#v2102-2023-03-22" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_5">Bug Fixes<a class="headerlink" href="#bug-fixes_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<h1 id="837-crashes-if-the-video-is-blocked-by-the-copyright-holder">837 crashes if the video is blocked by the copyright holder<a class="headerlink" href="#837-crashes-if-the-video-is-blocked-by-the-copyright-holder" title="Permanent link">&para;</a></h1>
+<p>(<a href="https://github.com/mps-youtube/yewtube/commit/c472c7a7e428122e147422df84a819b58e790455"><code>c472c7a</code></a>)</p>
+</li>
+<li>
+<p>Shuffle all throwing error "object does not support item assignment"
+  (<a href="https://github.com/mps-youtube/yewtube/commit/13fb47b8113a0ccfc884852065f587a4de94eb0d"><code>13fb47b</code></a>)</p>
+</li>
+</ul>
+<h2 id="v2101-2023-03-21">v2.10.1 (2023-03-21)<a class="headerlink" href="#v2101-2023-03-21" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_6">Bug Fixes<a class="headerlink" href="#bug-fixes_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<h1 id="980-added-pylast-as-dependency-in-reqtxt">980 added pylast as dependency in req.txt<a class="headerlink" href="#980-added-pylast-as-dependency-in-reqtxt" title="Permanent link">&para;</a></h1>
+  (<a href="https://github.com/mps-youtube/yewtube/commit/48cc757a4e89c551d6bcbbe54614f11fedeabbe9"><code>48cc757</code></a>)</li>
+</ul>
+<h2 id="v2100-2023-03-21">v2.10.0 (2023-03-21)<a class="headerlink" href="#v2100-2023-03-21" title="Permanent link">&para;</a></h2>
+<h2 id="v294-2023-01-28">v2.9.4 (2023-01-28)<a class="headerlink" href="#v294-2023-01-28" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_7">Bug Fixes<a class="headerlink" href="#bug-fixes_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Semantic release python pypi receipe
+  (<a href="https://github.com/mps-youtube/yewtube/commit/495629ab78534a1a6b36a2adae2bc6c200083706"><code>495629a</code></a>)</p>
+</li>
+<li>
+<p>Updated readme metioned yewtube as fork of mpsyt
+  (<a href="https://github.com/mps-youtube/yewtube/commit/385d6a77708991d1d27371067023b253c2d14770"><code>385d6a7</code></a>)</p>
+</li>
+</ul>
+<h3 id="documentation_2">Documentation<a class="headerlink" href="#documentation_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Added collaborators and contributors page
+  (<a href="https://github.com/mps-youtube/yewtube/commit/f25840322dea95d80b591732a2d3224047c020fc"><code>f258403</code></a>)</p>
+</li>
+<li>
+<p>Fix broken readme links
+  (<a href="https://github.com/mps-youtube/yewtube/commit/6d2d723e13d18854ab0a2c8c4364ff5a1c99b5d9"><code>6d2d723</code></a>)</p>
+</li>
+</ul>
+<h3 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Added subtitle suppport for vlc related to #331
+  (<a href="https://github.com/mps-youtube/yewtube/commit/96f2efd8352bf5cd3d3310214af69e0e6db37f5b"><code>96f2efd</code></a>)</li>
+</ul>
+<h2 id="v292-2023-01-26">v2.9.2 (2023-01-26)<a class="headerlink" href="#v292-2023-01-26" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_8">Bug Fixes<a class="headerlink" href="#bug-fixes_8" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Remove pyreadline dependency (#105) (<a href="https://github.com/mps-youtube/yewtube/pull/107">#107</a>,
+  <a href="https://github.com/mps-youtube/yewtube/commit/19e4148242380b543a4825962716550114984f11"><code>19e4148</code></a>)</li>
+</ul>
+<p>It's unmaintained and yewtube works fine without it</p>
+<p>Co-authored-by: Francesco Gazzetta <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#102;&#103;&#97;&#122;&#64;&#102;&#103;&#97;&#122;&#46;&#109;&#101;">&#102;&#103;&#97;&#122;&#64;&#102;&#103;&#97;&#122;&#46;&#109;&#101;</a></p>
+<h2 id="v291-2023-01-26">v2.9.1 (2023-01-26)<a class="headerlink" href="#v291-2023-01-26" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_9">Bug Fixes<a class="headerlink" href="#bug-fixes_9" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<h1 id="50-brought-back-download-audio-file">50 - brought back download audio file<a class="headerlink" href="#50-brought-back-download-audio-file" title="Permanent link">&para;</a></h1>
+  (<a href="https://github.com/mps-youtube/yewtube/commit/b46dab47e61c68efa0e51836a8cc9141d15d9e87"><code>b46dab4</code></a>)</li>
+</ul>
+<h2 id="v290-2022-10-20">v2.9.0 (2022-10-20)<a class="headerlink" href="#v290-2022-10-20" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_10">Bug Fixes<a class="headerlink" href="#bug-fixes_10" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<h1 id="76-video-pops-up">76 video pops up<a class="headerlink" href="#76-video-pops-up" title="Permanent link">&para;</a></h1>
+  (<a href="https://github.com/mps-youtube/yewtube/commit/eaeff58f94e2fd89706e42fdab6b8e82ef770941"><code>eaeff58</code></a>)</li>
+</ul>
+<h3 id="features_1">Features<a class="headerlink" href="#features_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>mplayer</strong>: Set cache (<a href="https://github.com/mps-youtube/yewtube/pull/93">#93</a>,
+  <a href="https://github.com/mps-youtube/yewtube/commit/16d3a186fb9feb24530e1f07b211062c44a515a0"><code>16d3a18</code></a>)</li>
+</ul>
+<h2 id="v285-2022-09-08">v2.8.5 (2022-09-08)<a class="headerlink" href="#v285-2022-09-08" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_11">Bug Fixes<a class="headerlink" href="#bug-fixes_11" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<h1 id="75-program-crashes-while-creating-custom-playlist-and-saving-it-without-playing">75 program crashes while creating custom playlist and saving it without playing<a class="headerlink" href="#75-program-crashes-while-creating-custom-playlist-and-saving-it-without-playing" title="Permanent link">&para;</a></h1>
+<p>(<a href="https://github.com/mps-youtube/yewtube/commit/2552eff602683fbd28bc6841768bf6cf585fc960"><code>2552eff</code></a>)</p>
+</li>
+<li>
+<p>Enable quit-watch-later in mpv #77
+  (<a href="https://github.com/mps-youtube/yewtube/commit/079e44088260c938dc3ae71cd55146fb51de653e"><code>079e440</code></a>)</p>
+</li>
+</ul>
+<p>Allows pressing shift-q to quit so mpv saves the video position and allows resuming on next play</p>
+<ul>
+<li><strong>main</strong>: Handle error when setting locale (<a href="https://github.com/mps-youtube/yewtube/pull/86">#86</a>,
+  <a href="https://github.com/mps-youtube/yewtube/commit/ecd117ca1ef753509b78082d6f919c9bc2b1756b"><code>ecd117c</code></a>)</li>
+</ul>
+<p>fix #85(main): handle error when setting locale</p>
+<h3 id="documentation_3">Documentation<a class="headerlink" href="#documentation_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Added common issues file. (<a href="https://github.com/mps-youtube/yewtube/pull/91">#91</a>,
+  <a href="https://github.com/mps-youtube/yewtube/commit/4b69e5ee96ed36efa9a68f6315322ed3d44d1e3d"><code>4b69e5e</code></a>)</p>
+</li>
+<li>
+<p>Added common issues file with some instructions for MacOS</p>
+</li>
+<li>
+<p>Modified readme with extra information about the common issue file</p>
+</li>
+</ul>
+<p>Co-authored-by: fazli.zekiqi <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#102;&#97;&#122;&#108;&#105;&#46;&#122;&#101;&#107;&#105;&#113;&#105;&#64;&#99;&#101;&#112;&#104;&#101;&#105;&#100;&#46;&#99;&#111;&#109;">&#102;&#97;&#122;&#108;&#105;&#46;&#122;&#101;&#107;&#105;&#113;&#105;&#64;&#99;&#101;&#112;&#104;&#101;&#105;&#100;&#46;&#99;&#111;&#109;</a></p>
+<h3 id="refactoring">Refactoring<a class="headerlink" href="#refactoring" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>main</strong>: Use logging instead of warning (<a href="https://github.com/mps-youtube/yewtube/pull/88">#88</a>,
+  <a href="https://github.com/mps-youtube/yewtube/commit/32e79356a96ec6e9e8e61496d39aff3c79d58da6"><code>32e7935</code></a>)</li>
+</ul>
+<h2 id="v284-2022-05-05">v2.8.4 (2022-05-05)<a class="headerlink" href="#v284-2022-05-05" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_12">Bug Fixes<a class="headerlink" href="#bug-fixes_12" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<h1 id="53-viewing-playlists-uploaded-by-a-user-is-back">53 viewing playlists uploaded by a user is back<a class="headerlink" href="#53-viewing-playlists-uploaded-by-a-user-is-back" title="Permanent link">&para;</a></h1>
+  (<a href="https://github.com/mps-youtube/yewtube/commit/f201cb5f4cd45b9341ced6b549fc35a57e85eb9f"><code>f201cb5</code></a>)</li>
+</ul>
+<h2 id="v283-2022-04-25">v2.8.3 (2022-04-25)<a class="headerlink" href="#v283-2022-04-25" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_13">Bug Fixes<a class="headerlink" href="#bug-fixes_13" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<h1 id="45-fetch-all-videos-of-a-playlist">45 fetch all videos of a playlist<a class="headerlink" href="#45-fetch-all-videos-of-a-playlist" title="Permanent link">&para;</a></h1>
+<p>(<a href="https://github.com/mps-youtube/yewtube/commit/261f4687668c6c05415102c66587a27518bbac10"><code>261f468</code></a>)</p>
+</li>
+<li>
+<h1 id="67-vlc-dummy-interface-does-not-work-with-live-channels">67 vlc dummy Interface does not work with live channels<a class="headerlink" href="#67-vlc-dummy-interface-does-not-work-with-live-channels" title="Permanent link">&para;</a></h1>
+<p>(<a href="https://github.com/mps-youtube/yewtube/commit/2d4637b04b6f738ab832b3beacab1e490e99a518"><code>2d4637b</code></a>)</p>
+</li>
+<li>
+<p>Save full playlists by name and all its videos
+  (<a href="https://github.com/mps-youtube/yewtube/commit/d69a9594c5824d97201774e81444b75aea93e861"><code>d69a959</code></a>)</p>
+</li>
+</ul>
+<h2 id="v282-2022-03-17">v2.8.2 (2022-03-17)<a class="headerlink" href="#v282-2022-03-17" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_14">Bug Fixes<a class="headerlink" href="#bug-fixes_14" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<h1 id="63-module-album-search-crash">63 module album search crash<a class="headerlink" href="#63-module-album-search-crash" title="Permanent link">&para;</a></h1>
+  (<a href="https://github.com/mps-youtube/yewtube/commit/3f2fcfb27bb60928282d1a4a68adff22980f5938"><code>3f2fcfb</code></a>)</li>
+</ul>
+<h2 id="v281-2022-03-08">v2.8.1 (2022-03-08)<a class="headerlink" href="#v281-2022-03-08" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_15">Bug Fixes<a class="headerlink" href="#bug-fixes_15" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<h1 id="24-colorama-support-for-windows">24 colorama support for windows<a class="headerlink" href="#24-colorama-support-for-windows" title="Permanent link">&para;</a></h1>
+<p>(<a href="https://github.com/mps-youtube/yewtube/commit/9cf261615a52f6ac64b6fb28390db2a71a7ab470"><code>9cf2616</code></a>)</p>
+</li>
+<li>
+<h1 id="28-show-changelog-with-help-new-command">28 show changelog with <code>help new</code> command<a class="headerlink" href="#28-show-changelog-with-help-new-command" title="Permanent link">&para;</a></h1>
+<p>(<a href="https://github.com/mps-youtube/yewtube/commit/d52b65d0c0cd8708020a2d6788102d82d8ebeee5"><code>d52b65d</code></a>)</p>
+</li>
+<li>
+<h1 id="35-remove-api-key-instructions">35 remove api key instructions<a class="headerlink" href="#35-remove-api-key-instructions" title="Permanent link">&para;</a></h1>
+<p>(<a href="https://github.com/mps-youtube/yewtube/commit/4f1fee3b711b2383b2704fba39bdce772894cc75"><code>4f1fee3</code></a>)</p>
+</li>
+<li>
+<h1 id="37-use-set-pages-command-to-config-how-many-search-result-pages-to-show">37 use <code>set pages</code> command to config how many search result pages to show<a class="headerlink" href="#37-use-set-pages-command-to-config-how-many-search-result-pages-to-show" title="Permanent link">&para;</a></h1>
+<p>(<a href="https://github.com/mps-youtube/yewtube/commit/2baec5fd11c0edf88d3543dd81333c5ecf67c918"><code>2baec5f</code></a>)</p>
+</li>
+<li>
+<h1 id="38-improved-help-menu-responsiveness">38 improved help menu responsiveness<a class="headerlink" href="#38-improved-help-menu-responsiveness" title="Permanent link">&para;</a></h1>
+<p>(<a href="https://github.com/mps-youtube/yewtube/commit/972b4efdb5fe8f5d3295b1c3fe607d209e7d39b6"><code>972b4ef</code></a>)</p>
+</li>
+<li>
+<h1 id="39-key-error-data">39 key error 'data'<a class="headerlink" href="#39-key-error-data" title="Permanent link">&para;</a></h1>
+<p>(<a href="https://github.com/mps-youtube/yewtube/commit/834ed5b0af5f92e1233e8ba327327654f67f61a0"><code>834ed5b</code></a>)</p>
+</li>
+<li>
+<h1 id="44-dont-run-init-when-importing-mps_youtube">44 dont run init when importing mps_youtube<a class="headerlink" href="#44-dont-run-init-when-importing-mps_youtube" title="Permanent link">&para;</a></h1>
+<p>(<a href="https://github.com/mps-youtube/yewtube/commit/a072c22e2781160bca79d0164e46e49f07ac28e1"><code>a072c22</code></a>)</p>
+</li>
+<li>
+<h1 id="54-play-video-using-youtube-short-link">54 play video using youtube short link<a class="headerlink" href="#54-play-video-using-youtube-short-link" title="Permanent link">&para;</a></h1>
+<p>(<a href="https://github.com/mps-youtube/yewtube/commit/92d1c776d4bcc47509becadc5ba9248477dc0dcc"><code>92d1c77</code></a>)</p>
+</li>
+<li>
+<p>26 album search working now without youtube api
+  (<a href="https://github.com/mps-youtube/yewtube/commit/9c3ae03b8c0ae006f1b9a917e4330270fec2f929"><code>9c3ae03</code></a>)</p>
+</li>
+<li>
+<p>Bring back requirements.txt to life
+  (<a href="https://github.com/mps-youtube/yewtube/commit/ff6e59d75834c61d72ec6bbc92f5eb339cc82607"><code>ff6e59d</code></a>)</p>
+</li>
+<li>
+<p>Buffersize warning
+  (<a href="https://github.com/mps-youtube/yewtube/commit/d185c3fdf8d520bcb4595f5e458d6022a7b6d1aa"><code>d185c3f</code></a>)</p>
+</li>
+<li>
+<p>Check for app updates
+  (<a href="https://github.com/mps-youtube/yewtube/commit/eabfb5233c7b87c5f300ebc41250a3f52db07411"><code>eabfb52</code></a>)</p>
+</li>
+<li>
+<p>Default player priority is vlc &gt; mpv &gt; mplayer on first install fixed #16
+  (<a href="https://github.com/mps-youtube/yewtube/commit/35409eb31cc67f03c50589e02cdff2ad08fe4911"><code>35409eb</code></a>)</p>
+</li>
+<li>
+<p>Don't crash if playlists / history file has invalid youtube id fixed #24
+  (<a href="https://github.com/mps-youtube/yewtube/commit/323d5d822cefc23889665d71cfffe9e40750433b"><code>323d5d8</code></a>)</p>
+</li>
+<li>
+<p>Playlists are working again fixed #18
+  (<a href="https://github.com/mps-youtube/yewtube/commit/bfceee493261d099c85bf2c4c9e79e5710e9799f"><code>bfceee4</code></a>)</p>
+</li>
+<li>
+<p>Use mkdocs instead of sphinx docs
+  (<a href="https://github.com/mps-youtube/yewtube/commit/32a2e9cdddac3ebb458d7bdcd793ed83ccc2fdf0"><code>32a2e9c</code></a>)</p>
+</li>
+<li>
+<p>build(setup): extras_require mkdocs</p>
+</li>
+<li>
+<p>package mkdocstrings-python-legacy</p>
+</li>
+<li>
+<p>refactor: check sys.stdout.encoding once</p>
+</li>
+</ul>
+<p>also isort module</p>
+<ul>
+<li>
+<p>docs: mkdocs</p>
+</li>
+<li>
+<p>skip_files for test files</p>
+</li>
+<li>
+<p>docs(CONTRIBUTING): mkdocs</p>
+</li>
+<li>
+<p><strong>g</strong>: Mpv msglevel
+  (<a href="https://github.com/mps-youtube/yewtube/commit/062b12503a8fa15dc720cf3ac91f001b74a5cf10"><code>062b125</code></a>)</p>
+</li>
+<li>
+<p><strong>mplayer</strong>: _get_mplayer_version
+  (<a href="https://github.com/mps-youtube/yewtube/commit/ab21c5d1bc872ed482bf482ad37949129c1e4f78"><code>ab21c5d</code></a>)</p>
+</li>
+<li>
+<p>isort module - type hint - function doc - return value type hint for func</p>
+</li>
+<li>
+<p><strong>mpris</strong>: Handle no data on time-pos
+  (<a href="https://github.com/mps-youtube/yewtube/commit/8bb29d33825ad826e51d9d8eada32a9b7bd10ffd"><code>8bb29d3</code></a>)</p>
+</li>
+<li>
+<p><strong>util.uea_pad</strong>: Handle AttributeError on t.split
+  (<a href="https://github.com/mps-youtube/yewtube/commit/1643266f21ccf7a99481a1615b4a53c4fbabc878"><code>1643266</code></a>)</p>
+</li>
+</ul>
+<p>also isort import</p>
+<h3 id="build-system">Build System<a class="headerlink" href="#build-system" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Include changelog
+  (<a href="https://github.com/mps-youtube/yewtube/commit/18390f5ffa3c812a41b0ec09c5b0f2077304f575"><code>18390f5</code></a>)</p>
+</li>
+<li>
+<p><strong>setup</strong>: Add requests
+  (<a href="https://github.com/mps-youtube/yewtube/commit/397eddd0146e04e95e6cc0598741bae8055a3e32"><code>397eddd</code></a>)</p>
+</li>
+</ul>
+<h3 id="continuous-integration">Continuous Integration<a class="headerlink" href="#continuous-integration" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Python-app
+  (<a href="https://github.com/mps-youtube/yewtube/commit/f40ca1a557974929da3cc0c599d1f9342b4cdfa9"><code>f40ca1a</code></a>)</p>
+</li>
+<li>
+<p><strong>python-app</strong>: Workflows based on origin/develop
+  (<a href="https://github.com/mps-youtube/yewtube/commit/3d117ad49ed8630873dd070f474e6641007fd01a"><code>3d117ad</code></a>)</p>
+</li>
+<li>
+<p>only run pytest - use matrix for python version and os</p>
+</li>
+</ul>
+<h3 id="features_2">Features<a class="headerlink" href="#features_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Use yewtube over tor using torsocks 🔥
+  (<a href="https://github.com/mps-youtube/yewtube/commit/1e9c4ce5992528286f552c8b563daef4abf9566a"><code>1e9c4ce</code></a>)</p>
+</li>
+<li>
+<p><strong>helptext</strong>: Help changelog
+  (<a href="https://github.com/mps-youtube/yewtube/commit/06439411d7a78fe6701f7313e9b3b0720248a197"><code>0643941</code></a>)</p>
+</li>
+<li>
+<p><strong>setup</strong>: Extras dependencies for mpris
+  (<a href="https://github.com/mps-youtube/yewtube/commit/936e8909b5212eda3a64e8b93be79d4353e6d646"><code>936e890</code></a>)</p>
+</li>
+</ul>
+<h3 id="refactoring_1">Refactoring<a class="headerlink" href="#refactoring_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Reset to upstream
+  (<a href="https://github.com/mps-youtube/yewtube/commit/dc4af721aa90fe79c492f9f1ae1f4a698049a085"><code>dc4af72</code></a>)</li>
+</ul>
+<h3 id="testing">Testing<a class="headerlink" href="#testing" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Uea_pad
+  (<a href="https://github.com/mps-youtube/yewtube/commit/22b4564e618aceb49bad34428e45e9ecf25907e6"><code>22b4564</code></a>)</p>
+</li>
+<li>
+<p><strong>mplayer</strong>: _get_mplayer_version
+  (<a href="https://github.com/mps-youtube/yewtube/commit/9c2350c87daed2a52460b4e9ad72ba4b11e7796f"><code>9c2350c</code></a>)</p>
+</li>
+</ul>
+<p>use default func behavior when no mplayer found</p>
+<ul>
+<li>
+<p><strong>mpris</strong>: Test_mpris.setproperty
+  (<a href="https://github.com/mps-youtube/yewtube/commit/10ec94adb7dd5cb0e00c58d1700039ee04479e21"><code>10ec94a</code></a>)</p>
+</li>
+<li>
+<p><strong>Mpris2Controller</strong>: Init
+  (<a href="https://github.com/mps-youtube/yewtube/commit/cb977eca7b8aa02c5cecf27c5c5a6e104c50c8c4"><code>cb977ec</code></a>)</p>
+</li>
+<li>
+<p><strong>test_main</strong>: Skip test without attribute after fork
+  (<a href="https://github.com/mps-youtube/yewtube/commit/35ded20a8ee1392c731bd6a35f1f3a2d10897c92"><code>35ded20</code></a>)</p>
+</li>
+</ul>
+<h2 id="v264-2022-02-16">v2.6.4 (2022-02-16)<a class="headerlink" href="#v264-2022-02-16" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_16">Bug Fixes<a class="headerlink" href="#bug-fixes_16" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Duplicate changelog and readme files
+  (<a href="https://github.com/mps-youtube/yewtube/commit/0265ef7507b539791684bdcf40b30ddaafc525e8"><code>0265ef7</code></a>)</li>
+</ul>
+<h2 id="v263-2022-02-16">v2.6.3 (2022-02-16)<a class="headerlink" href="#v263-2022-02-16" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_17">Bug Fixes<a class="headerlink" href="#bug-fixes_17" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Welcome from semantic release python
+  (<a href="https://github.com/mps-youtube/yewtube/commit/c237a6808869062036f5196775352c1504eafe06"><code>c237a68</code></a>)</p>
+</li>
+<li>
+<p><strong>setup</strong>: Use semantic versioning
+  (<a href="https://github.com/mps-youtube/yewtube/commit/2e100e761ede07a402bb975d428f1d6837154813"><code>2e100e7</code></a>)</p>
+</li>
+</ul>
+<h3 id="build-system_1">Build System<a class="headerlink" href="#build-system_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>setup</strong>: Fix long_description_content_type
+  (<a href="https://github.com/mps-youtube/yewtube/commit/db30143d8630d848098be4166e4a2c517a7b7772"><code>db30143</code></a>)</li>
+</ul>
+<h3 id="features_3">Features<a class="headerlink" href="#features_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong>setup</strong>: Restrict pyreadline3 to windows only
+  (<a href="https://github.com/mps-youtube/yewtube/commit/7ebbf208812a45d6bba7e152dacab8c30a2b6843"><code>7ebbf20</code></a>)</p>
+</li>
+<li>
+<p><strong>setup</strong>: Restrict python version
+  (<a href="https://github.com/mps-youtube/yewtube/commit/b9bc61f9ac2bd4935a47a7a76d21a730cf869449"><code>b9bc61f</code></a>)</p>
+</li>
+</ul>
+<h3 id="refactoring_2">Refactoring<a class="headerlink" href="#refactoring_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>setup</strong>: Check for minimum python 3.6
+  (<a href="https://github.com/mps-youtube/yewtube/commit/f5b5d733f4a8e115f48b335c3950efbb945d375f"><code>f5b5d73</code></a>)</li>
+</ul>
+<h2 id="v028-2018-02-17">v0.2.8 (2018-02-17)<a class="headerlink" href="#v028-2018-02-17" title="Permanent link">&para;</a></h2>
+<h2 id="v027-2016-06-27">v0.2.7 (2016-06-27)<a class="headerlink" href="#v027-2016-06-27" title="Permanent link">&para;</a></h2>
+<h2 id="v026-2016-01-01">v0.2.6 (2016-01-01)<a class="headerlink" href="#v026-2016-01-01" title="Permanent link">&para;</a></h2>
+<h2 id="v025-2015-06-01">v0.2.5 (2015-06-01)<a class="headerlink" href="#v025-2015-06-01" title="Permanent link">&para;</a></h2>
+<h2 id="v024-2015-05-13">v0.2.4 (2015-05-13)<a class="headerlink" href="#v024-2015-05-13" title="Permanent link">&para;</a></h2>
+<h2 id="v023-2015-02-17">v0.2.3 (2015-02-17)<a class="headerlink" href="#v023-2015-02-17" title="Permanent link">&para;</a></h2>
+<h2 id="v022-2015-02-14">v0.2.2 (2015-02-14)<a class="headerlink" href="#v022-2015-02-14" title="Permanent link">&para;</a></h2>
+<h2 id="v021-2014-11-27">v0.2.1 (2014-11-27)<a class="headerlink" href="#v021-2014-11-27" title="Permanent link">&para;</a></h2>
+<h2 id="v020-2014-11-25">v0.2.0 (2014-11-25)<a class="headerlink" href="#v020-2014-11-25" title="Permanent link">&para;</a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

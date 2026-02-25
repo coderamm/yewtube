@@ -1,0 +1,2693 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Terminal based YouTube player and downloader.">
+      
+      
+      
+        <link rel="canonical" href="https://iamtalhaasghar.github.io/yewtube/reference/helptext/">
+      
+      
+        <link rel="prev" href="../g/">
+      
+      
+        <link rel="next" href="../history/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+    
+    
+      
+        <title>helptext.py - Yewtube</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../../css/mkdocstrings.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mps_youtube.helptext" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Yewtube" class="md-header__button md-logo" aria-label="Yewtube" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Yewtube
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              helptext.py
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/mps-youtube/yewtube" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mps-youtube/yewtube
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../__init__/" class="md-tabs__link">
+          
+  
+  
+  Code Reference
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../contributing/" class="md-tabs__link">
+          
+  
+  
+  Development
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Yewtube" class="md-nav__button md-logo" aria-label="Yewtube" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Yewtube
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/mps-youtube/yewtube" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mps-youtube/yewtube
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Home
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    License
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Code Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Code Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    mps_youtube
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    mps_youtube
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../__init__/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    __init__.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../c/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    c.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cache/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    cache.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_4" id="__nav_2_1_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    commands
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    commands
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commands95_init__.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    __init__.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commands/album_search/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    album_search.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commands/config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    config.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commands/download/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    download.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commands/generate_playlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    generate_playlist.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commands/lastfm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    lastfm.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commands/local_playlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    local_playlist.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commands/misc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    misc.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commands/play/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    play.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commands/search/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    search.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commands/songlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    songlist.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commands/spotify_playlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    spotify_playlist.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../content/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    content.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contentquery/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    contentquery.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../description_parser/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    description_parser.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../g/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    g.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    helptext.py
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    helptext.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mps_youtube.helptext" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mps_youtube.helptext
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mps_youtube.helptext.get_help" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        get_help()
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mps_youtube.helptext.helptext" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        helptext()
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../history/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    history.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../init/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    init.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_12" id="__nav_2_1_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    listview
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    listview
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../listview95_init__.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    __init__.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../listview/base/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    base.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../listview/livestream/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    livestream.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../listview/songtitle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    songtitle.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../listview/user/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    user.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../main/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    main.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pafy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    pafy.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../paths/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    paths.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../player/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    player.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_17" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_17" id="__nav_2_1_17_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    players
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_17">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    players
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../players95_init__.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    __init__.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../players/GenericPlayer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GenericPlayer.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../players/mplayer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    mplayer.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../players/mpv/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    mpv.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../players/vlc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    vlc.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../playlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    playlist.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../playlists/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    playlists.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../screen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    screen.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../streams/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    streams.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../terminalsize/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    terminalsize.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../util/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    util.py
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Development
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Development
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mps_youtube.helptext" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mps_youtube.helptext
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mps_youtube.helptext.get_help" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        get_help()
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mps_youtube.helptext.helptext" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        helptext()
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>helptext.py</h1>
+
+<div class="doc doc-object doc-module">
+
+<a id="mps_youtube.helptext"></a>
+    <div class="doc doc-contents first">
+
+      <p>Holds all help text</p>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="mps_youtube.helptext.get_help" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">get_help</span><span class="p">(</span><span class="n">choice</span><span class="p">)</span></code>
+
+
+<a href="#mps_youtube.helptext.get_help" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Return help message. </p>
+
+        <details class="quote">
+          <summary>Source code in <code>mps_youtube\helptext.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">get_help</span><span class="p">(</span><span class="n">choice</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Return help message. &quot;&quot;&quot;</span>
+    <span class="n">helps</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;download&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;playback dl listen watch show repeat playing&quot;</span>
+                          <span class="s2">&quot;show_video playurl browserplay dlurl d da dv all *&quot;</span>
+                          <span class="s2">&quot; play browsersearch&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">()),</span>
+
+             <span class="s2">&quot;dl-command&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;dlcmd dl-cmd download-cmd dl_cmd download_cmd &quot;</span>
+                            <span class="s2">&quot;download-command download_command&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">()),</span>
+
+             <span class="s2">&quot;encode&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;encoding transcoding transcode wma mp3 format &quot;</span>
+                        <span class="s2">&quot;encode encoder&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">()),</span>
+
+             <span class="s2">&quot;invoke&quot;</span><span class="p">:</span> <span class="s2">&quot;command commands yt invocation&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">(),</span>
+
+             <span class="s2">&quot;search&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;user userpl pl pls r n p url album &quot;</span>
+                        <span class="s2">&quot;editing result results related remove swop mkp --description&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">()),</span>
+
+             <span class="s2">&quot;edit&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;editing manupulate manipulating rm mv sw edit move &quot;</span>
+                      <span class="s2">&quot;swap shuffle&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">()),</span>
+
+             <span class="s2">&quot;tips&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;undump dump -f -w -a adv advanced&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)),</span>
+
+             <span class="s2">&quot;basic&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;basic comment basics c copy clipboard comments u &quot;</span>
+                       <span class="s2">&quot;i&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">()),</span>
+
+             <span class="s2">&quot;config&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;set checkupdate colours colors ddir directory player &quot;</span>
+                        <span class="s2">&quot;arguments args playerargs music search_music keys &quot;</span>
+                        <span class="s2">&quot;status show_status show_video video configuration &quot;</span>
+                        <span class="s2">&quot;fullscreen full screen folder player mpv mplayer&quot;</span>
+                        <span class="s2">&quot; settings default reset configure audio results &quot;</span>
+                        <span class="s2">&quot;max_results size lines rows height window &quot;</span>
+                        <span class="s2">&quot;position window_pos quality resolution max_res &quot;</span>
+                        <span class="s2">&quot;columns width console overwrite&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">()),</span>
+
+             <span class="s2">&quot;playlists&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;save rename delete move rm ls mv sw add vp open&quot;</span>
+                           <span class="s2">&quot; view&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">())}</span>
+
+    <span class="k">for</span> <span class="n">topic</span><span class="p">,</span> <span class="n">aliases</span> <span class="ow">in</span> <span class="n">helps</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+
+        <span class="k">if</span> <span class="n">choice</span> <span class="ow">in</span> <span class="n">aliases</span><span class="p">:</span>
+            <span class="n">choice</span> <span class="o">=</span> <span class="n">topic</span>
+            <span class="k">break</span>
+
+    <span class="n">choice</span> <span class="o">=</span> <span class="s2">&quot;menu&quot;</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">choice</span> <span class="k">else</span> <span class="n">choice</span>
+    <span class="n">out</span><span class="p">,</span> <span class="n">all_help</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">helptext</span><span class="p">()</span>
+    <span class="n">help_names</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">all_help</span><span class="p">]</span>
+    <span class="n">choice</span> <span class="o">=</span> <span class="n">get_near_name</span><span class="p">(</span><span class="n">choice</span><span class="p">,</span> <span class="n">help_names</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">indent</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Indent. &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">  &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">))</span>
+
+    <span class="k">if</span> <span class="n">choice</span> <span class="o">==</span> <span class="s2">&quot;menu&quot;</span> <span class="ow">or</span> <span class="n">choice</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">help_names</span><span class="p">:</span>
+        <span class="n">out</span> <span class="o">+=</span> <span class="s2">&quot;  </span><span class="si">%s</span><span class="s2">Help Topics</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">ul</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">w</span><span class="p">)</span>
+        <span class="n">out</span> <span class="o">+=</span> <span class="n">F</span><span class="p">(</span><span class="s1">&#39;help topic&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">all_help</span><span class="p">:</span>
+            <span class="n">out</span> <span class="o">+=</span> <span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="si">%s</span><span class="s2">     </span><span class="si">%-10s%s</span><span class="s2"> : </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">c</span><span class="o">.</span><span class="n">w</span><span class="p">,</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+
+        <span class="n">out</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="k">return</span> <span class="n">out</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">choice</span> <span class="o">==</span> <span class="s1">&#39;tor&#39;</span><span class="p">:</span>
+            <span class="n">output_text</span> <span class="o">=</span> <span class="n">check_tor</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">choice</span> <span class="o">==</span> <span class="s1">&#39;new&#39;</span><span class="p">:</span>
+            <span class="n">output_text</span> <span class="o">=</span> <span class="n">get_changelog</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">choice</span> <span class="o">==</span> <span class="s2">&quot;changelog&quot;</span><span class="p">:</span>
+            <span class="n">output_text</span> <span class="o">=</span> <span class="n">get_changelog_local</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">choice</span> <span class="o">=</span> <span class="n">help_names</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">choice</span><span class="p">)</span>
+            <span class="n">output_text</span> <span class="o">=</span> <span class="n">all_help</span><span class="p">[</span><span class="n">choice</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="n">indent</span><span class="p">(</span><span class="n">output_text</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="mps_youtube.helptext.helptext" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">helptext</span><span class="p">()</span></code>
+
+
+<a href="#mps_youtube.helptext.helptext" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Return a list of help categories, with their contents. </p>
+
+        <details class="quote">
+          <summary>Source code in <code>mps_youtube\helptext.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">helptext</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Return a list of help categories, with their contents. &quot;&quot;&quot;</span>
+
+    <span class="k">return</span> <span class="p">[</span>
+        <span class="p">(</span><span class="s2">&quot;basic&quot;</span><span class="p">,</span> <span class="s2">&quot;Basics&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;</span>
+
+<span class="s2">    </span><span class="si">{0}</span><span class="s2">Basic Usage</span><span class="si">{1}</span>
+
+<span class="s2">    Use </span><span class="si">{2}</span><span class="s2">/</span><span class="si">{1}</span><span class="s2"> or </span><span class="si">{2}</span><span class="s2">.</span><span class="si">{1}</span><span class="s2"> to prefix your search query.  e.g., </span><span class="si">{2}</span><span class="s2">/pink floyd</span><span class="si">{1}</span>
+
+<span class="s2">    Then, when results are shown:</span>
+
+<span class="s2">        </span><span class="si">{2}</span><span class="s2">&lt;number(s)&gt;</span><span class="si">{1}</span><span class="s2"> - play specified items, separated by commas.</span>
+<span class="s2">                      e.g., </span><span class="si">{2}</span><span class="s2">1-3,5</span><span class="si">{1}</span><span class="s2"> plays items 1, 2, 3 and 5.</span>
+
+<span class="s2">        </span><span class="si">{2}</span><span class="s2">i &lt;number&gt;</span><span class="si">{1}</span><span class="s2"> - view information on video &lt;number&gt;</span>
+<span class="s2">        </span><span class="si">{2}</span><span class="s2">c &lt;number&gt;</span><span class="si">{1}</span><span class="s2"> - view comments for video &lt;number&gt;</span>
+<span class="s2">        </span><span class="si">{2}</span><span class="s2">d &lt;number&gt;</span><span class="si">{1}</span><span class="s2"> - download video &lt;number&gt;</span>
+<span class="s2">        </span><span class="si">{2}</span><span class="s2">r &lt;number&gt;</span><span class="si">{1}</span><span class="s2"> - show videos related to video &lt;number&gt;</span>
+<span class="s2">        </span><span class="si">{2}</span><span class="s2">u &lt;number&gt;</span><span class="si">{1}</span><span class="s2"> - show videos uploaded by uploader of video &lt;number&gt;</span>
+<span class="s2">        </span><span class="si">{2}</span><span class="s2">x &lt;number&gt;</span><span class="si">{1}</span><span class="s2"> - copy item &lt;number&gt; url to clipboard. (See the note below)</span>
+<span class="s2">        Note: This feature requires `pyperclip` which is installed automatically when you install yewtube but</span>
+<span class="s2">        Linux users further need to install `xsel` or `xclip` manually using apt, dnf, pacman, zypper or whatever package manager you use.</span>
+<span class="s2">        Visit https://pyperclip.readthedocs.io/en/latest/index.html#not-implemented-error for more info.</span>
+
+<span class="s2">        </span><span class="si">{2}</span><span class="s2">q</span><span class="si">{1}</span><span class="s2">, </span><span class="si">{2}</span><span class="s2">quit</span><span class="si">{1}</span><span class="s2"> - exit yewtube</span>
+<span class="s2">    &quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">ul</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">w</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">y</span><span class="p">)),</span>
+        <span class="p">(</span><span class="s2">&quot;search&quot;</span><span class="p">,</span> <span class="s2">&quot;Searching and Retrieving&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    </span><span class="si">{0}</span><span class="s2">Searching and Retrieving</span><span class="si">{1}</span>
+
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">set search_music false</span><span class="si">{1}</span><span class="s2"> - search all YouTube categories.</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">set search_music true</span><span class="si">{1}</span><span class="s2">  - search only YouTube music category.</span>
+
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">/&lt;query&gt;</span><span class="si">{1}</span><span class="s2"> or </span><span class="si">{2}</span><span class="s2">.&lt;query&gt;</span><span class="si">{1}</span><span class="s2"> to search for videos. e.g., </span><span class="si">{2}</span><span class="s2">/daft punk</span><span class="si">{1}</span>
+<span class="s2">    Search Arguments:</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">-d, --duration</span><span class="si">{1}</span><span class="s2">    Can be any/short/medium/long</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">-a, --after</span><span class="si">{1}</span><span class="s2">       Date in </span><span class="si">{2}</span><span class="s2">YYYY-MM-DD</span><span class="si">{1}</span><span class="s2"> or </span><span class="si">{2}</span><span class="s2">YYYY-MM-DD</span><span class="si">{1}</span><span class="s2">T</span><span class="si">{2}</span><span class="s2">HH:MM</span><span class="si">{1}</span><span class="s2"> format</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">-l, --live</span><span class="si">{1}</span><span class="s2">        Limit search to livestreams</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">-c, --category</span><span class="si">{1}</span><span class="s2">    Search within a category, (number or string)</span>
+<span class="s2">                      Available categories:</span>
+<span class="s2">                      </span><span class="si">{2}{3}{1}</span>
+
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">//&lt;query&gt;</span><span class="si">{1}</span><span class="s2"> or </span><span class="si">{2}</span><span class="s2">..&lt;query&gt;</span><span class="si">{1}</span><span class="s2"> - search for YouTube playlists. e.g., </span><span class="se">\</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">//80&#39;s music</span><span class="si">{1}</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">n</span><span class="si">{1}</span><span class="s2"> and </span><span class="si">{2}</span><span class="s2">p</span><span class="si">{1}</span><span class="s2"> - continue search to next/previous pages.</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">p &lt;number&gt;</span><span class="si">{1}</span><span class="s2"> - switch to page &lt;number&gt;.</span>
+
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">album &lt;album title&gt;</span><span class="si">{1}</span><span class="s2"> - Search for matching tracks using album title</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">channels &lt;Channel name&gt;</span><span class="si">{1}</span><span class="s2"> - Search for channels by channelname</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">live &lt;category&gt;</span><span class="si">{1}</span><span class="s2"> - Search for livestreams from a range of categories.</span>
+<span class="s2">    Categories: </span><span class="si">{2}{3}{1}</span>
+
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">mkp &lt;fullfilepath&gt;</span><span class="si">{1}</span><span class="s2"> - Creates a playlist automatically with video titles from fullfilepath</span>
+<span class="s2">    &lt;fullfilepath&gt;: Full path of text file with one title per line</span>
+
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">mkp -d &lt;search result number&gt;</span><span class="si">{1}</span><span class="s2"> - Create a playlist based on tracks</span>
+<span class="s2">    listed in that videos description. (Alternatively one can use </span><span class="si">{2}</span><span class="s2">--description</span><span class="si">{1}</span><span class="s2">)</span>
+
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">user &lt;username&gt;</span><span class="si">{1}</span><span class="s2"> - list YouTube uploads by &lt;username&gt;.</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">user &lt;username&gt;/&lt;query&gt;</span><span class="si">{1}</span><span class="s2"> - as above, but matches &lt;query&gt;.</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">userpl &lt;username&gt;</span><span class="si">{1}</span><span class="s2"> - list YouTube playlists created by &lt;username&gt;.</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">pl &lt;url or id&gt;</span><span class="si">{1}</span><span class="s2"> - Open YouTube playlist by url or id.</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">url &lt;url or id&gt;</span><span class="si">{1}</span><span class="s2"> - Retrieve specific YouTube video by url or id.</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">url &lt;url&gt; &lt;url&gt; ... &lt;url&gt;</span><span class="si">{1}</span><span class="s2"> - Retrieve specific YouTube videos by url or id.</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">url_file &lt;file_absolute_path&gt;</span><span class="si">{1}</span><span class="s2"> - Retrieve YouTube videos by url or id from a .txt file.</span>
+<span class="s2">    File format : .txt, with one url or id by line.</span>
+
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">r &lt;number&gt;</span><span class="si">{1}</span><span class="s2"> - show videos related to video &lt;number&gt;.</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">u &lt;number&gt;</span><span class="si">{1}</span><span class="s2"> - show videos uploaded by uploader of video &lt;number&gt;.</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">c &lt;number&gt;</span><span class="si">{1}</span><span class="s2"> - view comments for video &lt;number&gt;</span>
+<span class="s2">    &quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">ul</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">w</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">g</span><span class="o">.</span><span class="n">categories</span><span class="o">.</span><span class="n">keys</span><span class="p">()))),</span>
+
+        <span class="p">(</span><span class="s2">&quot;edit&quot;</span><span class="p">,</span> <span class="s2">&quot;Editing / Manipulating Results&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    </span><span class="si">{0}</span><span class="s2">Editing and Manipulating Results</span><span class="si">{1}</span>
+
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">rm &lt;number(s)&gt;</span><span class="si">{1}</span><span class="s2"> - remove items from displayed results.</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">sw &lt;number&gt;,&lt;number&gt;</span><span class="si">{1}</span><span class="s2"> - swap two items.</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">mv &lt;number&gt;,&lt;number&gt;</span><span class="si">{1}</span><span class="s2"> - move item &lt;number&gt; to position &lt;number&gt;.</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">save &lt;name&gt;</span><span class="si">{1}</span><span class="s2"> - save displayed items as a local playlist.</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">mix &lt;number&gt;</span><span class="si">{1}</span><span class="s2"> - show YouTube mix playlist from item in results.</span>
+
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">shuffle</span><span class="si">{1}</span><span class="s2"> - Shuffle the displayed results.</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">shuffle all</span><span class="si">{1}</span><span class="s2"> - Shuffle entire loaded playlist.</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">reverse</span><span class="si">{1}</span><span class="s2"> or </span><span class="si">{2}</span><span class="s2">reverse &lt;number&gt;-&lt;number&gt;</span><span class="si">{1}</span><span class="s2"> - Reverse the displayed items or item range.</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">reverse all</span><span class="si">{1}</span><span class="s2"> - Reverse order of entire loaded playlist.</span>
+<span class="s2">    &quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">ul</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">w</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">y</span><span class="p">)),</span>
+
+        <span class="p">(</span><span class="s2">&quot;download&quot;</span><span class="p">,</span> <span class="s2">&quot;Downloading and Playback&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    </span><span class="si">{0}</span><span class="s2">Downloading and Playback</span><span class="si">{1}</span>
+
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">set show_video true</span><span class="si">{1}</span><span class="s2"> - play video instead of audio.</span>
+
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">&lt;number(s)&gt;</span><span class="si">{1}</span><span class="s2"> - play specified items, separated by commas.</span>
+<span class="s2">                  e.g., </span><span class="si">{2}</span><span class="s2">1-3,5</span><span class="si">{1}</span><span class="s2"> plays items 1, 2, 3 and 5</span>
+
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">d &lt;number&gt;</span><span class="si">{1}</span><span class="s2"> - view downloads available for an item.</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">da &lt;number(s)&gt;</span><span class="si">{1}</span><span class="s2"> - download best available audio file(s).</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">dv &lt;number(s)&gt;</span><span class="si">{1}</span><span class="s2"> - download best available video file(s).</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">dapl &lt;url or id&gt;</span><span class="si">{1}</span><span class="s2"> - download YouTube playlist (audio) by url or id.</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">dvpl &lt;url or id&gt;</span><span class="si">{1}</span><span class="s2"> - download YouTube playlist (video) by url or id.</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">daupl &lt;username&gt;</span><span class="si">{1}</span><span class="s2"> - download user&#39;s YouTube playlists (audio).</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">dvupl &lt;username&gt;</span><span class="si">{1}</span><span class="s2"> - download user&#39;s YouTube playlists (video).</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">dlurl &lt;url or id&gt;</span><span class="si">{1}</span><span class="s2"> - download a YouTube video by url or video id.</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">daurl &lt;url or id&gt;</span><span class="si">{1}</span><span class="s2"> - download best available audio of YouTube video by url or video id.</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">playurl &lt;url or id&gt;</span><span class="si">{1}</span><span class="s2"> - play a YouTube video by url or id.</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">browserplay &lt;number&gt;</span><span class="si">{1}</span><span class="s2"> - open a specified previous search in browser.</span>
+
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">all</span><span class="si">{1}</span><span class="s2"> or </span><span class="si">{2}</span><span class="s2">*</span><span class="si">{1}</span><span class="s2"> - play all displayed items.</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">repeat &lt;number(s)&gt;</span><span class="si">{1}</span><span class="s2"> - play and repeat the specified items.</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">shuffle &lt;number(s)&gt;</span><span class="si">{1}</span><span class="s2"> - play specified items in random order.</span>
+<span class="s2">    &quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">ul</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">w</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">y</span><span class="p">)),</span>
+
+        <span class="p">(</span><span class="s2">&quot;dl-command&quot;</span><span class="p">,</span> <span class="s2">&quot;Downloading Using External Application&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    </span><span class="si">{0}</span><span class="s2">Download Using A Custom Application</span><span class="si">{1}</span>
+
+<span class="s2">    Use </span><span class="si">{2}</span><span class="s2">set download_command &lt;command&gt;</span><span class="si">{1}</span><span class="s2"> to specify a custom command to use for</span>
+<span class="s2">    downloading.</span>
+
+<span class="s2">    mps-youtube will make the following substitutions:</span>
+
+<span class="s2">    </span><span class="si">%u</span><span class="s2"> - url of the remote file to download</span>
+<span class="s2">    </span><span class="si">%d</span><span class="s2"> - download directory as set in DDIR in mps-youtube config</span>
+<span class="s2">    </span><span class="si">%f</span><span class="s2"> - filename (determined by title and filetype)</span>
+<span class="s2">    </span><span class="si">%F</span><span class="s2"> - full file path (</span><span class="si">%d</span><span class="s2">/</span><span class="si">%f</span><span class="s2">)</span>
+<span class="s2">    </span><span class="si">%i</span><span class="s2"> - youtube video id</span>
+
+<span class="s2">    for example, to download using aria2c (http://aria2.sourceforge.net), enter:</span>
+
+<span class="s2">        </span><span class="si">{2}</span><span class="s2">set download_command aria2c --dir=</span><span class="si">%d</span><span class="s2"> --out=</span><span class="si">%f</span><span class="s2"> </span><span class="si">%u{1}</span>
+
+<span class="s2">    Note that using a custom download command does not support transcoding the</span>
+<span class="s2">    downloaded file to another format using mps-youtube.</span>
+<span class="s2">    &quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">ul</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">w</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">y</span><span class="p">)),</span>
+
+
+        <span class="p">(</span><span class="s2">&quot;encode&quot;</span><span class="p">,</span> <span class="s2">&quot;Encoding to MP3 and other formats&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    </span><span class="si">{0}</span><span class="s2">Encoding to MP3 and other formats</span><span class="si">{1}</span>
+
+<span class="s2">    Enter </span><span class="si">{2}</span><span class="s2">encoders</span><span class="si">{1}</span><span class="s2"> to view available encoding presets</span>
+<span class="s2">    Enter </span><span class="si">{2}</span><span class="s2">set encoder &lt;number&gt;</span><span class="si">{1}</span><span class="s2"> to apply an encoding preset for downloads</span>
+
+<span class="s2">    This feature requires that ffmpeg or avconv is installed on your system and is</span>
+<span class="s2">    available in the system path.</span>
+
+<span class="s2">    The encoding presets can be modified by editing the text config file which</span>
+<span class="s2">    resides at:</span>
+<span class="s2">       </span><span class="si">{3}</span>
+<span class="s2">    &quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">ul</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">w</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">g</span><span class="o">.</span><span class="n">TCFILE</span><span class="p">)),</span>
+
+        <span class="p">(</span><span class="s2">&quot;playlists&quot;</span><span class="p">,</span> <span class="s2">&quot;Using Local Playlists&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    </span><span class="si">{0}</span><span class="s2">Using Local Playlists</span><span class="si">{1}</span>
+
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">add &lt;number(s)&gt;</span><span class="si">{1}</span><span class="s2"> - add items to the current playlist.</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">add &lt;number(s)&gt; &lt;playlist&gt;</span><span class="si">{1}</span><span class="s2"> - add items to the specified playlist.</span>
+<span class="s2">         (&lt;playlist&gt; will be created if it doesn&#39;t already exist)</span>
+
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">vp</span><span class="si">{1}</span><span class="s2"> - view current playlist.</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">ls</span><span class="si">{1}</span><span class="s2"> - list saved playlists.</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">mv &lt;old name or ID&gt; &lt;new name&gt;</span><span class="si">{1}</span><span class="s2"> - rename a playlist.</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">rmp &lt;playlist_name or ID&gt;</span><span class="si">{1}</span><span class="s2"> - delete a playlist from disk.</span>
+
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">open &lt;name or ID&gt;</span><span class="si">{1}</span><span class="s2"> - open a saved playlist as the current playlist.</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">play &lt;name or ID&gt;</span><span class="si">{1}</span><span class="s2"> - play a saved playlist directly.</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">view &lt;name or ID&gt;</span><span class="si">{1}</span><span class="s2"> - view a playlist (current playlist left intact).</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">save</span><span class="si">{1}</span><span class="s2"> or </span><span class="si">{2}</span><span class="s2">save &lt;name&gt;</span><span class="si">{1}</span><span class="s2"> - save the displayed items as a playlist.</span>
+
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">rm &lt;number(s)&gt;</span><span class="si">{1}</span><span class="s2"> - remove items from displayed results.</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">sw &lt;number&gt;,&lt;number&gt;</span><span class="si">{1}</span><span class="s2"> - swap two items.</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">mv &lt;number&gt;,&lt;number&gt;</span><span class="si">{1}</span><span class="s2"> - move item &lt;number&gt; to position &lt;number&gt;.</span>
+<span class="s2">    &quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">ul</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">w</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">y</span><span class="p">)),</span>
+
+        <span class="p">(</span><span class="s2">&quot;history&quot;</span><span class="p">,</span> <span class="s2">&quot;Accessing Local History&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    </span><span class="si">{0}</span><span class="s2">Accessing Local History</span><span class="si">{1}</span>
+
+<span class="s2">    Access songs that have been played within yewtube</span>
+
+<span class="s2">        </span><span class="si">{2}</span><span class="s2">history</span><span class="si">{1}</span><span class="s2"> - displays a list of songs contained in history</span>
+<span class="s2">        </span><span class="si">{2}</span><span class="s2">history clear</span><span class="si">{1}</span><span class="s2"> - clears the song history</span>
+<span class="s2">        </span><span class="si">{2}</span><span class="s2">history recent</span><span class="si">{1}</span><span class="s2"> - displays a list of recent played songs</span>
+<span class="s2">        </span><span class="si">{2}</span><span class="s2">set history on|off</span><span class="si">{1}</span><span class="s2"> - toggles history recording</span>
+<span class="s2">    &quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">ul</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">w</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">y</span><span class="p">)),</span>
+
+        <span class="p">(</span><span class="s2">&quot;invoke&quot;</span><span class="p">,</span> <span class="s2">&quot;Invocation Parameters&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    </span><span class="si">{0}</span><span class="s2">Invocation</span><span class="si">{1}</span>
+
+<span class="s2">    All yewtube commands can be entered from the command line.  For example;</span>
+
+<span class="s2">      </span><span class="si">{2}</span><span class="s2">yt dlurl &lt;url or id&gt;</span><span class="si">{1}</span><span class="s2"> to download a YouTube video by url or id</span>
+<span class="s2">      </span><span class="si">{2}</span><span class="s2">yt playurl &lt;url or id&gt;</span><span class="si">{1}</span><span class="s2"> to play a YouTube video by url or id</span>
+<span class="s2">      </span><span class="si">{2}</span><span class="s2">yt /mozart</span><span class="si">{1}</span><span class="s2"> to search</span>
+<span class="s2">      </span><span class="si">{2}</span><span class="s2">yt //best songs of 2010</span><span class="si">{1}</span><span class="s2"> for a playlist search</span>
+<span class="s2">      </span><span class="si">{2}</span><span class="s2">yt play &lt;playlist name or ID&gt;</span><span class="si">{1}</span><span class="s2"> to play a saved playlist</span>
+<span class="s2">      </span><span class="si">{2}</span><span class="s2">yt ls</span><span class="si">{1}</span><span class="s2"> to list saved playlists</span>
+
+<span class="s2">    For further automation, a series of commands can be entered separated by</span>
+<span class="s2">    commas (,).  E.g.,</span>
+
+<span class="s2">      </span><span class="si">{2}</span><span class="s2">yt open 1, 2-4</span><span class="si">{1}</span><span class="s2"> - play items 2-4 of first saved playlist</span>
+<span class="s2">      </span><span class="si">{2}</span><span class="s2">yt //the doors, 1, all -a</span><span class="si">{1}</span><span class="s2"> - open YouTube playlist and play audio</span>
+
+<span class="s2">    If you need to enter an actual comma on the command line, use </span><span class="si">{2}</span><span class="s2">,,</span><span class="si">{1}</span><span class="s2"> instead.</span>
+<span class="s2">    &quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">ul</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">w</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">y</span><span class="p">)),</span>
+
+        <span class="p">(</span><span class="s2">&quot;config&quot;</span><span class="p">,</span> <span class="s2">&quot;Configuration Options&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    </span><span class="si">{0}</span><span class="s2">Configuration</span><span class="si">{1}</span>
+
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">set</span><span class="si">{1}</span><span class="s2"> - view current configuration</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">set &lt;item&gt; default</span><span class="si">{1}</span><span class="s2"> - set an item to its default value</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">set all default</span><span class="si">{1}</span><span class="s2"> - restore default settings</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">set checkupdate true|false</span><span class="si">{1}</span><span class="s2"> - check for updates on exit</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">set columns &lt;columns&gt;</span><span class="si">{1}</span><span class="s2"> - select extra displayed fields in search results:</span>
+<span class="s2">         (valid: views comments rating date time user likes dislikes category ytid)</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">set ddir &lt;download direcory&gt;</span><span class="si">{1}</span><span class="s2"> - set where downloads are saved</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">set download_command &lt;command&gt;</span><span class="si">{1}</span><span class="s2"> - type </span><span class="si">{2}</span><span class="s2">help dl-command</span><span class="si">{1}</span><span class="s2"> for info</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">set encoder &lt;number&gt;</span><span class="si">{1}</span><span class="s2"> - set encoding preset for downloaded files</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">set fullscreen true|false</span><span class="si">{1}</span><span class="s2"> - output video content in full-screen mode</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">set always_repeat true|false</span><span class="si">{1}</span><span class="s2"> - always in repeat mode without repeat &lt;number&gt;</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">set max_res &lt;number&gt;</span><span class="si">{1}</span><span class="s2"> - play / download maximum video resolution height</span><span class="si">{3}</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">set notifier &lt;notifier app&gt;</span><span class="si">{1}</span><span class="s2"> - call &lt;notifier app&gt; with each new song title</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">set order &lt;relevance|date|views|rating&gt;</span><span class="si">{1}</span><span class="s2"> search result ordering</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">set user_order &lt;&lt;nothing&gt;|relevance|date|views|rating&gt;</span><span class="si">{1}</span><span class="s2"> user upload list</span>
+<span class="s2">        result ordering, leave blank for the same as order setting</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">set overwrite true|false</span><span class="si">{1}</span><span class="s2"> - overwrite existing files (skip if false)</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">set player &lt;player app&gt;</span><span class="si">{1}</span><span class="s2"> - use &lt;player app&gt; for playback</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">set playerargs &lt;args&gt;</span><span class="si">{1}</span><span class="s2"> - use specified arguments with player</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">set lookup_metadata true|false</span><span class="si">{1}</span><span class="s2"> - lookup metadata using Last.fm</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">set lastfm_username &lt;username&gt;</span><span class="si">{1}</span><span class="s2"> - scrobble to this Last.fm userprofile</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">set lastfm_password &lt;password&gt;</span><span class="si">{1}</span><span class="s2"> - Last.fm password (saved in hash form)</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">set lastfm_api &lt;key&gt;</span><span class="si">{1}</span><span class="s2"> - API key needed for Last.fm mps-yt authorization</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">set lastfm_secret &lt;key&gt;</span><span class="si">{1}</span><span class="s2"> - secret for the Last.fm API key</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">set search_music true|false</span><span class="si">{1}</span><span class="s2"> - search only music (all categories if false)</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">set show_mplayer_keys true|false</span><span class="si">{1}</span><span class="s2"> - show keyboard help for mplayer and mpv</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">set show_status true|false</span><span class="si">{1}</span><span class="s2"> - show status messages and progress</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">set show_video true|false</span><span class="si">{1}</span><span class="s2"> - show video output (audio only if false)</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">set window_pos &lt;top|bottom&gt;-&lt;left|right&gt;</span><span class="si">{1}</span><span class="s2"> - set player window position</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">set window_size &lt;number&gt;x&lt;number&gt;</span><span class="si">{1}</span><span class="s2"> - set player window width &amp; height</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">set audio_format &lt;auto|m4a|webm&gt;</span><span class="si">{1}</span><span class="s2"> - set default music audio format</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">set video_format &lt;auto|mp4|webm|3gp&gt;</span><span class="si">{1}</span><span class="s2"> - set default music video format</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">set set_title true|false</span><span class="si">{1}</span><span class="s2"> - change window title</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">set show_qrcode true|false</span><span class="si">{1}</span><span class="s2"> - show qrcode of the URL in the video information panel</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">set history true|false</span><span class="si">{1}</span><span class="s2"> - record play history</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">set input_history true|false</span><span class="si">{1}</span><span class="s2"> - record command input history</span>
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">set vlc_dummy_interface true|false</span><span class="si">{1}</span><span class="s2"> - whether to hide VLC GUI or not (hides when true)</span>
+
+<span class="s2">    Additionally, </span><span class="si">{2}</span><span class="s2">set -t</span><span class="si">{1}</span><span class="s2"> may be used to temporarily change a setting without</span>
+<span class="s2">    saving it to disk</span>
+<span class="s2">    &quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">ul</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">w</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="si">{0}</span><span class="s1">set max_results &lt;number&gt;</span><span class="si">{1}</span><span class="s1"> - show &lt;number&gt; re&#39;</span>
+               <span class="s1">&#39;sults when searching (max 50)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">w</span><span class="p">)</span> <span class="k">if</span> <span class="ow">not</span>
+               <span class="n">g</span><span class="o">.</span><span class="n">detectable_size</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span><span class="p">)),</span>
+
+        <span class="p">(</span><span class="s2">&quot;lastfm&quot;</span><span class="p">,</span> <span class="s2">&quot;Last.fm configuration&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    </span><span class="si">{0}</span><span class="s2">Configure Last.fm</span><span class="si">{1}</span>
+
+<span class="s2">    pylast needs to be installed for Last.fm support. See https://github.com/pylast/pylast.</span>
+
+<span class="s2">    Use </span><span class="si">{2}</span><span class="s2">set</span><span class="si">{1}</span><span class="s2"> to set your Last.fm login credenditals, e.g. </span><span class="si">{2}</span><span class="s2">set lastfm_username jane_doe</span><span class="si">{1}</span><span class="s2">.</span>
+<span class="s2">    Similarly, you also have to provide an API key and it&#39;s corresponding secret.</span>
+<span class="s2">    An API key can be retrieved from https://www.last.fm/api/account/create.</span>
+
+<span class="s2">    Your Last.fm configuration is saved and automatically reloaded when mps-youtube starts.</span>
+
+<span class="s2">    After having set the required information, a connection can also be established</span>
+<span class="s2">    with </span><span class="si">{2}</span><span class="s2">lastfm_connect</span><span class="si">{1}</span><span class="s2">. Additionally, </span><span class="si">{2}</span><span class="s2">lastfm_connect</span><span class="si">{1}</span><span class="s2"> provides verbose error messages.</span>
+
+<span class="s2">    For now, Last.fm support only works with the </span><span class="si">{2}</span><span class="s2">album</span><span class="si">{1}</span><span class="s2"> command.</span>
+<span class="s2">    &quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">ul</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">w</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">y</span><span class="p">)),</span>
+
+        <span class="p">(</span><span class="s2">&quot;tips&quot;</span><span class="p">,</span> <span class="s2">&quot;Advanced Tips&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    </span><span class="si">{0}</span><span class="s2">Advanced Tips</span><span class="si">{1}</span>
+
+<span class="s2">    Use </span><span class="si">{2}</span><span class="s2">-w</span><span class="si">{1}</span><span class="s2">, </span><span class="si">{2}</span><span class="s2">-f</span><span class="si">{1}</span><span class="s2"> or </span><span class="si">{2}</span><span class="s2">-a</span><span class="si">{1}</span><span class="s2"> with your choice to override the configured</span><span class="se">\</span>
+<span class="s2">     setting and</span>
+<span class="s2">    play items in windowed, fullscreen or audio modes.  E.g., 1-4 -a</span>
+
+<span class="s2">    When specifying columns with </span><span class="si">{2}</span><span class="s2">set columns</span><span class="si">{1}</span><span class="s2"> command, append :N to set</span><span class="se">\</span>
+<span class="s2">     width.</span>
+<span class="s2">        E.g.: </span><span class="si">{2}</span><span class="s2">set columns date views user:17 likes</span><span class="si">{1}</span>
+
+<span class="s2">    When using </span><span class="si">{2}</span><span class="s2">open</span><span class="si">{1}</span><span class="s2">, </span><span class="si">{2}</span><span class="s2">view</span><span class="si">{1}</span><span class="s2"> or </span><span class="si">{2}</span><span class="s2">play</span><span class="si">{1}</span><span class="s2"> to access a local playlist, </span><span class="se">\</span>
+<span class="s2">    you can enter</span>
+<span class="s2">    the first few characters instead of the whole name.</span>
+
+<span class="s2">    Use </span><span class="si">{2}</span><span class="s2">5-</span><span class="si">{1}</span><span class="s2"> to select items 5 upward and </span><span class="si">{2}</span><span class="s2">-5</span><span class="si">{1}</span><span class="s2"> to select up to item 5. </span><span class="se">\</span>
+<span class="s2">    This can be</span>
+<span class="s2">    included with other choices. e.g., 5,3,7-,-2</span>
+<span class="s2">    You can use spaces instead of commas: 5 3 7- -2</span>
+<span class="s2">    Reversed ranges also work. eg., 5-2</span>
+
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">dump</span><span class="si">{1}</span><span class="s2"> - to show entire contents of an opened YouTube playlist.</span>
+<span class="s2">           (useful for playing or saving entire playlists, use </span><span class="si">{2}</span><span class="s2">undump</span><span class="si">{1}</span><span class="s2"> to </span><span class="se">\</span>
+<span class="s2">    undo)</span>
+
+<span class="s2">    </span><span class="si">{2}</span><span class="s2">set player mpv</span><span class="si">{1}</span><span class="s2"> or </span><span class="si">{2}</span><span class="s2">set player mplayer</span><span class="si">{1}</span><span class="s2"> - change player application</span>
+
+<span class="s2">    Use </span><span class="si">{2}</span><span class="s2">1</span><span class="si">{1}</span><span class="s2"> and </span><span class="si">{2}</span><span class="s2">0</span><span class="si">{1}</span><span class="s2"> in place of true and false when using the </span><span class="si">{2}</span><span class="s2">set</span><span class="si">{1}</span><span class="s2"> </span><span class="se">\</span>
+<span class="s2">    command</span>
+
+<span class="s2">    Use </span><span class="si">{2}</span><span class="s2">clearcache</span><span class="si">{1}</span><span class="s2"> command to clear the cache.</span>
+<span class="s2">    &quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                <span class="n">c</span><span class="o">.</span><span class="n">ul</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">w</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">y</span>
+            <span class="p">),</span>
+        <span class="p">),</span>
+        <span class="p">(</span>
+            <span class="s2">&quot;new&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Show online changelog for the latest version&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;{0}What&#39;s New{1}\n{3}&quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">ul</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">w</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="s2">&quot;get_changelog()&quot;</span><span class="p">),</span>
+        <span class="p">),</span>
+        <span class="p">(</span>
+            <span class="s2">&quot;changelog&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Check program changelog&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;{0}Changelog{1}\n{3}&quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">ul</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">w</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="s2">&quot;get_changelog_local()&quot;</span><span class="p">),</span>
+        <span class="p">),</span>
+        <span class="p">(</span>
+            <span class="s2">&quot;tor&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Check Tor Status. NOTE: Use this feature at your own risk. In case of any kind of damage we will not be responsible.&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;{0}Tor Status{1}\n{3}&quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">ul</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">w</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="s2">&quot;check_tor()&quot;</span><span class="p">),</span>
+        <span class="p">),</span>
+    <span class="p">]</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
