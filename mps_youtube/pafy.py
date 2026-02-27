@@ -1,3 +1,4 @@
+import asyncio
 import json
 import os, glob
 import random
@@ -6,7 +7,7 @@ from urllib.parse import parse_qs, urlparse
 
 import requests
 import yt_dlp
-from youtubesearchpython import VideosSearch, ChannelsSearch, PlaylistsSearch, Suggestions, Playlist, playlist_from_channel_id, Comments, Video, Channel, ChannelSearch
+from py_yt import VideosSearch, ChannelsSearch, PlaylistsSearch, Suggestions, Playlist, Video, Channel, ChannelSearch
 
 
 class MyLogger:
@@ -65,52 +66,69 @@ def download_video(ytid, folder, audio_only=False):
         return True
 
 def search_videos(query, pages):
-
     '''
     Given a keyword / query this function will return youtube video results against those keywords / query
     '''
-
-    videosSearch = VideosSearch(query, limit=50)
-    wdata = videosSearch.result()['result']
-    for i in range(pages-1):
-        videosSearch.next()
-        wdata.extend(videosSearch.result()['result'])
-    return wdata
+    async def _async_search():
+        videosSearch = VideosSearch(query, limit=50)
+        result = await videosSearch.next()
+        wdata = result.get('result', []) if result else []
+        for i in range(pages-1):
+            try:
+                result = await videosSearch.next()
+                if result and 'result' in result:
+                    wdata.extend(result['result'])
+            except:
+                break
+        return wdata
+    
+    return asyncio.run(_async_search())
 
 
 def channel_search(query):
-
     '''
     Search channel based on keyword / query provided by user
     '''
-
-    channelsSearch = ChannelsSearch(query, limit=50, region='US')
-    return channelsSearch.result()['result']
+    async def _async_search():
+        channelsSearch = ChannelsSearch(query, limit=50, region='US')
+        result = await channelsSearch.next()
+        return result['result']
+    
+    return asyncio.run(_async_search())
 
 def playlist_search(query):
-
     '''
     Returns all playlists having similar names as keyword / query provided
     '''
-
-    playlistsSearch = PlaylistsSearch(query, limit=50)
-    return playlistsSearch.result()['result']
+    async def _async_search():
+        playlistsSearch = PlaylistsSearch(query, limit=50)
+        result = await playlistsSearch.next()
+        return result['result']
+    
+    return asyncio.run(_async_search())
 
 def get_playlist(playlist_id):
-
     '''
     Get all videos of a playlist identified by playlist_id
     '''
-
-    playlist = Playlist('https://www.youtube.com/playlist?list=%s' % playlist_id)
-    while playlist.hasMoreVideos:
-        playlist.getNextVideos()
-    return playlist
+    async def _async_get():
+        playlist = await Playlist.get('https://www.youtube.com/playlist?list=%s' % playlist_id)
+        while playlist.hasMoreVideos:
+            await playlist.getNextVideos()
+        return playlist
+    
+    return asyncio.run(_async_get())
 
 def get_video_title_suggestions(query):
-    suggestions = Suggestions(language = 'en', region = 'US')
-    related_searches = suggestions.get(query)['result']
-    return related_searches[random.randint(0,len(related_searches))]
+    '''
+    Get search suggestions for a query
+    '''
+    async def _async_get():
+        result = await Suggestions.get(query, language='en', region='US')
+        related_searches = result['result']
+        return related_searches[random.randint(0, len(related_searches) - 1)] if related_searches else query
+    
+    return asyncio.run(_async_get())
 
 def channel_id_from_name(query):
     channel_info = channel_search(query)[0]
@@ -120,32 +138,59 @@ def channel_id_from_name(query):
 
 def all_videos_from_channel(channel_id):
     '''
-    Get all videos of a playlist identified by channel_id
+    Get all videos from a channel identified by channel_id
     '''
-
-    playlist = Playlist(playlist_from_channel_id(channel_id))
-    while playlist.hasMoreVideos:
-        playlist.getNextVideos()
-    return playlist.videos
+    async def _async_get():
+        channel = Channel(channel_id)
+        await channel.init()
+        videos = channel.result.get('videos', [])
+        while channel.has_more_videos():
+            await channel.next()
+            videos.extend(channel.result.get('videos', []))
+        return videos
+    
+    return asyncio.run(_async_get())
 
 def search_videos_from_channel(channel_id, query):
-    search = ChannelSearch(query , channel_id)
-    return search.result()
+    '''
+    Search for videos within a specific channel
+    '''
+    async def _async_search():
+        search = ChannelSearch(query, channel_id)
+        result = await search.next()
+        return result
+    
+    return asyncio.run(_async_search())
 
 def get_comments(video_id):
-    comments = Comments.get(video_id)
-    return comments['result']
+    '''
+    Get comments for a video using yt-dlp
+    '''
+    try:
+        with yt_dlp.YoutubeDL({'logger': MyLogger(), 'getcomments': True, 'skip_download': True}) as ydl:
+            info = ydl.extract_info(f'https://www.youtube.com/watch?v={video_id}', download=False)
+            comments = info.get('comments', [])
+            # Format to match expected structure
+            return [{'text': c.get('text', ''), 'author': c.get('author', ''), 'time': c.get('timestamp', 0)} for c in comments]
+    except Exception as e:
+        return []
 
 def get_video_info(video_id):
-    try:
-        videoInfo = Video.getInfo(video_id)
-        response = return_dislikes(video_id)
-        videoInfo['likes'] = response['likes']
-        videoInfo['dislikes'] = response['dislikes']
-        videoInfo['averageRating'] = response['rating']
-        return videoInfo
-    except:
-        raise Exception("Can't get video info. Video is either private or unavailable in your country.")
+    '''
+    Get detailed information about a video
+    '''
+    async def _async_get():
+        try:
+            videoInfo = await Video.getInfo(video_id)
+            response = return_dislikes(video_id)
+            videoInfo['likes'] = response['likes']
+            videoInfo['dislikes'] = response['dislikes']
+            videoInfo['averageRating'] = response['rating']
+            return videoInfo
+        except:
+            raise Exception("Can't get video info. Video is either private or unavailable in your country.")
+    
+    return asyncio.run(_async_get())
 
 def return_dislikes(video_id):
     return json.loads(requests.get('https://returnyoutubedislikeapi.com/votes?videoId=' + video_id).text)
@@ -193,12 +238,19 @@ def extract_video_id(url: str) -> str:
     raise ValueError(err % url)
 
 def all_playlists_from_channel(channel_id):
-    channel = Channel(channel_id)
-    playlists = channel.result['playlists']
-    while channel.has_more_playlists():
-         channel.next()
-         playlists.extend(channel.result["playlists"])
-    return playlists
+    '''
+    Get all playlists from a channel
+    '''
+    async def _async_get():
+        channel = Channel(channel_id)
+        await channel.init()
+        playlists = channel.result.get('playlists', [])
+        while channel.has_more_playlists():
+            await channel.next()
+            playlists.extend(channel.result.get('playlists', []))
+        return playlists
+    
+    return asyncio.run(_async_get())
 
 def get_subtitles(ytid, output_dir):
     '''

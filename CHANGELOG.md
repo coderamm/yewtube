@@ -1,5 +1,7 @@
 # CHANGELOG
 
+## v2.12.2 (2026-02-27)
+- Replaced youtube-search-python with py-yt-search package as it's maintained and stable. 
 
 ## v2.12.1 (2025-01-05)
 
@@ -201,6 +203,7 @@ fix #85(main): handle error when setting locale
 * Added common issues file with some instructions for MacOS
 
 * Modified readme with extra information about the common issue file
+
 
 Co-authored-by: fazli.zekiqi <fazli.zekiqi@cepheid.com>
 

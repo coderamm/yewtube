@@ -19,4 +19,5 @@ tags
 env/
 .idea/
 venv/
+.venv*/
 test.py
